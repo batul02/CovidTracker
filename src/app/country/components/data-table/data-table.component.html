@@ -1,0 +1,25 @@
+<div class="row mt-5">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Total Cases</th>
+                    <th scope="col">Total Deaths</th>
+                    <th scope="col">Total Recovered</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let country of countries; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <th scope="row">{{ country?.Country }}</th>
+                    <th scope="row">{{ country?.TotalConfirmed | number }}</th>
+                    <th scope="row">{{ country?.TotalDeaths | number }}</th>
+                    <th scope="row">{{ country?.TotalRecovered | number }}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
