@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { LiveRoutingModule } from './live-routing.module';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { LivePageComponent } from './components/live-page/live-page.component';
+import { LiveRoutingModule } from './live-routing.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { LivePageComponent } from './components/live-page/live-page.component';
   ],
   imports: [
     CommonModule,
-    LiveRoutingModule
+    LiveRoutingModule,
+    HighchartsChartModule
   ]
 })
 export class LiveModule { }

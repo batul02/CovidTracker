@@ -9,6 +9,8 @@ import { DataService } from 'src/app/shared/services/data.service';
 export class SummaryPageComponent implements OnInit {
   covidData: any = {};
 
+  countryToSearch: string = '';
+
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
@@ -18,6 +20,10 @@ export class SummaryPageComponent implements OnInit {
           this.covidData = data;
         }
       );
+  }
+
+  searchCountry(searchTerm: string){
+    this.countryToSearch = searchTerm;
   }
 
 }
